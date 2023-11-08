@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %} 
+
+{% block body %}
+  <div>
+    <h1>Calcul de n!</h1>
+    <form method="get">
+      <input type="number" name="k" min=0 step=1 placeholder="n" 
+        {% if k is defined %}
+          value={{k}}
+        {% endif %}
+      />
+      <input type="submit" value="OK" name="fact">
+    </form>
+  </div>
+
+  <div>
+    <h1>Calcul des combinaisons de n éléments dans p places</h1>
+    <form method="get">
+      <input type="number" name="n" min=0 step=1 placeholder="n" 
+        {% if n is defined %}
+          value={{n}}
+        {% endif %}
+      />
+      <input type="number" name="p" min=0 step=1 placeholder="p" 
+        {% if p is defined %}
+          value={{p}}
+        {% endif %}
+      />
+      <input type="submit" value="OK" name="combi">
+    </form>
+  </div>
+  
+  {% block resultat %}{% endblock %}
+{% endblock %}

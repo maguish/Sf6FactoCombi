@@ -1,0 +1,14 @@
+{# Pour faire des commentaires #}
+
+{% extends 'twig_fact_combi/form.html.twig' %} 
+
+{% block resultat %}
+    <h1>Résultat </h1>
+    {% if p is defined %}
+        Combinaisons({{n}}, {{p}}) = {{r}}
+
+    {% elseif k is defined %}
+        Factorielle( {{k}} ) = {{ r }}
+  
+    {% endif %}
+{% endblock %}
